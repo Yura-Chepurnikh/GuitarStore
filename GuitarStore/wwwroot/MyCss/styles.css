@@ -1,0 +1,104 @@
+﻿﻿html {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 100vh;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+header {
+    gap: 10px;
+}
+
+.image-container {
+    overflow: hidden;
+    width: 200px; 
+    transition: transform 0.3s ease; 
+}
+
+.image-container:hover {
+    transform: scale(1.2); 
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+li a img {
+    height: 22px;
+    width: auto;
+}
+
+nav ul li a p {
+    color: white;
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer ul {
+    list-style-type: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+}
+
+.wrap {
+    position: relative;
+}
+
+.sidenav {
+    padding-bottom: 100%;
+    width: 0;
+    position: sticky;
+    z-index: 1;
+    left: 0;
+    overflow: hidden;
+    background-color: antiquewhite;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: sandybrown;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}

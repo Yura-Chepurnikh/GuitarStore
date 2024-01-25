@@ -1,0 +1,51 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+}
+
+border {
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.price img {
+    height: 15px;
+    width: auto;
+}
+
+span p {
+    font-size: 3px;
+}
+
+.col-md-custom3 {
+    width: 49.5%;
+}
+
+.col-md-custom4 {
+    width: 49.5%;
+}
+
+.add button {
+    border: 0px;
+    background-color: #024ef2;
+    border-radius: 2px;
+    width: 10px;
+    height: 10px;
+}
+
+    .add button:hover {
+        background-color: #4178f0;
+        transition: background-color 0.3s ease;
+    }
+
+    .add button:hover {
+        background-color: #4178f0;
+        transition: background-color 0.3s ease;
+    }
+
+strike {
+    font-size: 9px;
+}
