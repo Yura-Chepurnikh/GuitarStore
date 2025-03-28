@@ -80,7 +80,7 @@ public class GuitarController : Controller
 				}
 				catch (Exception ex)
 				{
-					Console.WriteLine($"Ошибка при создании гитары: {ex.Message}");
+					Console.WriteLine($"An error when creating a guitar: {ex.Message}");
 					return View(guitar);
 				}
 			}
@@ -90,7 +90,7 @@ public class GuitarController : Controller
 				{
 					foreach (var error in modelState.Errors)
 					{
-						Console.WriteLine($"Ошибка модели: {error.ErrorMessage}");
+						Console.WriteLine($"Model error: {error.ErrorMessage}");
 					}
 				}
 

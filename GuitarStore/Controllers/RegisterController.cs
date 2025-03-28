@@ -27,10 +27,9 @@ public class RegisterController : Controller
 	{
 		try
 		{
-			// Проверка, существует ли пользователь с таким же email
 			if (_context.Users.Any(u => u.Email == user.Email))
 			{
-				return BadRequest("Пользователь с таким email уже существует");
+				return BadRequest("The user with this email already exists");
 			}
 			var newUser = new User
 			{
@@ -44,23 +43,21 @@ public class RegisterController : Controller
 			_context.Users.Add(newUser);
 			_context.SaveChanges();
 
-			return RedirectToAction("RegisterSuccess", "Register"); // Успешная регистрация
+			return RedirectToAction("RegisterSuccess", "Register"); 
 		}
 		catch (DbUpdateException)
 		{
-			return StatusCode(500, "Ошибка при регистрации");
+			return StatusCode(500, "Error during registration");
 		}
 	}
 }
 public class PasswordHasher
 {
-	// Метод для хеширования пароля
 	public static string HashPassword(string password)
 	{
 		return BCrypt.Net.BCrypt.HashPassword(password);
 	}
 
-	// Метод для проверки хеша пароля
 	public static bool VerifyPassword(string enteredPassword, string hashedPassword)
 	{
 		return BCrypt.Net.BCrypt.Verify(enteredPassword, hashedPassword);

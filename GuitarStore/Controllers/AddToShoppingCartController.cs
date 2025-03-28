@@ -40,14 +40,14 @@ namespace GuitarStore.Controllers
 
 				if (userId == 0 || guitarId == 0)
 				{
-					return BadRequest("Неверные параметры запроса");
+					return BadRequest("Invalid request parameters");
 				}
 
 				bool existingAdd = _context.Likes.Any(l => l.UserId == userId && l.GuitarId == guitarId);
 
 				if (existingAdd)
 				{
-					return BadRequest("Add уже существует");
+					return BadRequest("already exists");
 				}
 
 				AddToShoppingCart addToShoppingCart = new AddToShoppingCart

@@ -40,7 +40,7 @@ namespace GuitarStore.Controllers
 
 				if (userId == 0 || guitarId == 0)
 				{
-					return BadRequest("Неверные параметры запроса");
+					return BadRequest("Invalid request parameters");
 				}
 
 				bool existingLike = _context.Likes.Any(l => l.UserId == userId && l.GuitarId == guitarId);
