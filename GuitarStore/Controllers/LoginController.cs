@@ -31,7 +31,7 @@ public class LoginController : Controller
 
 			if (existingUser == null || !PasswordHasher.VerifyPassword(user.Password, existingUser.PasswordHash))
 			{
-				return BadRequest("Неверный email или пароль");
+				return BadRequest("Invalid email or password");
 			}
 
 			HttpContext.Session.SetInt32("UserId", existingUser.UserId);
@@ -67,7 +67,7 @@ public class LoginController : Controller
 		}
 		catch
 		{
-			return StatusCode(500, "Ошибка при аутентификации");
+			return StatusCode(500, "Authentication error");
 		}
 	}
 

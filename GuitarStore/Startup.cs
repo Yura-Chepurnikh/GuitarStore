@@ -34,7 +34,6 @@ namespace GuitarStore.Models
 			}
 			else
 			{
-				// Обработка ошибок в production
 				app.UseExceptionHandler("/Home/Error");
 				app.UseHsts();
 			}

@@ -15,11 +15,11 @@ namespace GuitarStore.Models
 		public string? PasswordHash { get; set; }
 		public void SetPassword(string password)
 		{
-			this.PasswordHash = BCrypt.Net.BCrypt.HashPassword(password); // Генерация хеша пароля 
+			this.PasswordHash = BCrypt.Net.BCrypt.HashPassword(password); 
 		}
 		public bool VerifyPassword(string enteredPassword)
 		{
-			return BCrypt.Net.BCrypt.Verify(enteredPassword, this.PasswordHash);    // Проверка хеша пароля
+			return BCrypt.Net.BCrypt.Verify(enteredPassword, this.PasswordHash);   
 		}
 		public ICollection<Order>? Orders { get; set; } 
 		public ICollection<Like>? Likes { get; set; }
